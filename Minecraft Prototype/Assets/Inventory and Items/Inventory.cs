@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
 	{
 		for (int i = 0; i < inventory.Count; i++) 
 		{
-			GUI.Label (new Rect(10, 10, 200, 50), inventory[i].name);
+			GUI.Label (new Rect(10, i * 20, 200, 50), inventory[i].name);
 		}
 	}
 }
