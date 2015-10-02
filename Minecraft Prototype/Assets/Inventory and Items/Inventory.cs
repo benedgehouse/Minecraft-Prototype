@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour 
 {
+	public int slotsX, slotsY;
 	public List<Item> inventory = new List<Item>();
 	private ItemDatabase database;
 
@@ -14,13 +15,19 @@ public class Inventory : MonoBehaviour
 
 		inventory.Add (database.items[0]);
 		inventory.Add (database.items[1]);
+		inventory.Add (database.items[0]);
+		inventory.Add (database.items[1]);
+		inventory.Add (database.items[0]);
+		inventory.Add (database.items[1]);
+		inventory.Add (database.items[0]);
+		inventory.Add (database.items[1]);
 	}
 	
 	void OnGUI ()
 	{
 		for (int i = 0; i < inventory.Count; i++) 
 		{
-			GUI.Label (new Rect(10, i * 20, 200, 50), inventory[i].name);
+			GUI.Label (new Rect(10, i * 20, 200, 50), inventory[i].itemName);
 		}
 	}
 }
